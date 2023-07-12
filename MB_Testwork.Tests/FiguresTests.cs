@@ -128,5 +128,30 @@ namespace MB_Testwork.Tests
 
         #endregion
 
+        [TestMethod]
+        public void CheckCircleSquareAsFigure()
+        {
+            //arrange
+            Figure figure = new Circle(0.1);
+
+            //act
+            var figureSquare = figure.Square;
+
+            //assert
+            Assert.AreEqual(Math.PI * 0.01, figureSquare);
+        }
+
+        [TestMethod]
+        public void CheckTriangleSquareAsFigure()
+        {
+            //arrange
+            Figure figure = new Triangle(10, 15, 20);
+
+            //act
+            var figureSquare = figure.Square;
+
+            //assert
+            Assert.AreEqual(72.61843774138907, figureSquare);
+        }
     }
 }
